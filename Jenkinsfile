@@ -1,10 +1,20 @@
 pipeline {
     agent any
-    
     stages {
-        stage('Hola desde GitHub') {
+       
+        stage('Build') {
             steps {
-                echo 'Pipeline ejecutándose desde un Jenkinsfile en GitHub'
+                echo 'Building...'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
             }
         }
     }
